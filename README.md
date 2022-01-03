@@ -1,5 +1,7 @@
 This is War!
+
 ![](ThisisWarWireframe.png)
+
 A game of 'I Declare War' with a little more pink and fluffiness!
 
 
