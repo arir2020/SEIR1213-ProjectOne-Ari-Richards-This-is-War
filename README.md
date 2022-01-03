@@ -1,2 +1,2 @@
 # This-is-War
-![Wireframe](file:///Users/ari/Downloads/ThisisWarWireframe.jpg)
+![Wireframe](///Users/ari/Downloads/ThisisWarWireframe.jpg)
