@@ -26,9 +26,9 @@ A game of 'I Declare War' with a little more pink and fluffiness!
 
 ##Psudocode
 
-> page loads
+Page loads
 
-> title and components load 
+Title and components load 
 
     >components: title, start button, reset button, player score box, computer score box, players' cards, players' names
 
