@@ -35,26 +35,40 @@ A game of 'I Declare War' with a little more pink and fluffiness!
 
 Start the game 
 
-> push the start button and begin the game
-
+    > push the start button and begin the game  
     > score boxes are set to zero
     > shuffle cards
     > deal cards
     > alert the player that the cards are dealt
     > alert the player that the game has begun 
-    > 
 
 Playing the Game
 
-> 
+    > each player reveals a card
+    > a comparison is made
+    > add cards to winner's deck OR declare war if tied
+    > allow the players to keep playing cards until one player's deck is empty
 
 War!
 
->
+    > alert the player thar war is about to begin
+    > push button to declare war
+    > count down to one 
+    > each player draws three cards but only reveals the last card they drew
+    > compare the last cards drawn
+    > decide a winner OR if tied, reveal and compare the next card and so on
+    > all cards played during war goes to winner
+    > alert players' who won the war
 
 Declaring a Winner
 
->
+    > once a player's deck is empty, alert the opposing player that they won
+    > add a point to the winner's score box
+    > alert the player that the game is over
+    > alert the player to reset the game if they want to play again
 
 
 Resetting the game (while maintaining score)
+
+    > clear all cards off the board
+    > return cards to dealer's deck
