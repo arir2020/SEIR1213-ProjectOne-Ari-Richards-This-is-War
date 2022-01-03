@@ -72,3 +72,5 @@ Resetting the game (while maintaining score)
 
     > clear all cards off the board
     > return cards to dealer's deck
+    > alert and ask player if they want to reset score
+    > do not reset the score boxes 
