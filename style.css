@@ -1,3 +1,107 @@
 *{
     box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    background-color: wheat;
+    color: whitesmoke;
 }
+
+h1, h2{
+    color: whitesmoke;
+    background-color: pink;
+    text-align: center;
+    font-size: 100px;
+    border-radius: 25px;
+    border: dotted whitesmoke;
+}
+
+h2 {
+    font-size: 50px;
+    margin: 15px 10px;    
+}
+
+#gameboard{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 1250px;
+    justify-content: center;
+    border: 5px solid whitesmoke;
+}
+
+.cell{
+    width: 48%;
+    height: 500px;
+    margin: 5px;
+    border: 5px solid whitesmoke;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* li{
+    color: whitesmoke;
+    background-color: pink;
+    font-size: 25px;
+    list-style: none;
+    text-align: center;
+    margin: 10px 5px 5px 10px;
+} */
+
+/* #container{
+    border: 2px solid whitesmoke;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    padding: 5px auto;
+    height: 75%;
+}
+
+.player-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.scorebox {
+    width: 125px;
+    height: 125px;
+    margin: 50px;
+    border: 3px solid gray;
+    background-color: whitesmoke;
+}
+
+#playersScorebox, #computersScorebox {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.text{
+    font-size: 30px;
+    color: whitesmoke;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.container {
+    display: inline-block;
+    justify-self: center;
+    width: 45%;
+    height: 500px;
+    border: 5px solid whitesmoke;
+    margin: 0 20px 0 20px;
+} */

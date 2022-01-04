@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js" defe></script>
+    <script src="main.js" type="module"></script>
+    <script src="deck.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <title>This is War!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poiret+One&display=swap" rel="stylesheet">    <title>This is War!</title>
 </head>
 <body>
-<header>This is War!</header>   
+<header>
+    <h1>This is War!</h1>
+</header>
+<main id="container">
+    <div id="gameboard">
+        <div class="cell" id="playersBoard"><h2>Player's Board</h2></div>
+        <div class="cell" id="computersBoard"><h2>Computer's Board</h2></div>
+    </div>
+</main>
 </body>
 </html>
