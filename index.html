@@ -12,12 +12,35 @@
 <body>
 <header>
     <h1>This is War!</h1>
+    <nav>
+        <ul>
+            <li class="button">Let the War Begin!</li>
+        </ul>
+    </nav>
 </header>
 <main id="container">
     <div id="gameboard">
-        <div class="cell" id="playersBoard"><h2>Player's Board</h2></div>
-        <div class="cell" id="computersBoard"><h2>Computer's Board</h2></div>
+        <div class="cell" id="playersBoard">
+            <h2>Player's Board</h2>
+            <div class="box" id="playersScorebox"></div>
+            <div class="card">Player's Card</div>
+            <div class="card">Player's Deck</div>   
+            <button class="box">Play a Card</button>      
+        </div>
+        <div class="cell" id="computersBoard">
+            <h2>Computer's Board</h2>
+            <div class="box" id="computersScorebox"></div>
+            <div class="card">Computer's Card</div>           
+            <div class="card">Computer's Deck</div>
+            <h2>Game Result</h2>
+        </div>
     </div>
 </main>
 </body>
+<footer>
+    <ul>
+        <li class="button">Let the War Restart!</li>
+        <li class="button">Let the War Reset!</li>
+    </ul>
+</footer>
 </html>
