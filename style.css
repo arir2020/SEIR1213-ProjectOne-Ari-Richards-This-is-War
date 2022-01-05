@@ -38,8 +38,8 @@ h2 {
 .box{
     width: 20%;
     height: 100px;
-    background-color: pink;
-    border: 5px solid whitesmoke;
+    background-color: #ffc0cb;
+    border: 5px solid #f5f5f5;
     margin: 0 250px;
     border-radius: 10px;
 }
