@@ -19,16 +19,23 @@
 </header>
 <main id="container">
     <div id="gameboard">
+        <div class="deck">
+            <!-- <img class="card" src="Cards/AceofClubs.png"> -->
+        </div>
         <div class="cell" id="playersBoard">
             <h2>Player's Board</h2>
             <div class="box" id="playersScorebox">Score</div>
             <!-- <div class="box" id="playersWinbox">Wins</div> -->
             <!-- <div class="card">Player's Card</div> -->
             <!-- <img src="Card Template.png" alt="Blank Card" id="pCardDisplay"> -->
+            <div class="playingCard" id="cardWrapper">
             <div id="pCardDisplay">pCard</div>
+            </div>
             <!-- <div class="card">Player's Deck</div>    -->
             <!-- <img src="Card Template.png" alt="Blank Card" id="playersDeck"> -->
+            <div class="playingCard" id="cardWrapper">
             <div id="pDeckDisplay">pDeck</div>
+            </div>
             <button class="box" id="playButton">Play a Card</button>      
         </div>
         <div class="cell" id="computersBoard">
@@ -37,20 +44,25 @@
             <!-- <div class="box" id="computersWinbox">Wins</div> -->
             <!-- <div class="card">Computer's Card</div>-->
             <!-- <img src="Card Template.png" alt="Blank Card" id="cCardDisplay"> -->
+            <div class="playingCard" id="cardWrapper">
             <div id="cCardDisplay">cCard</div>
+            </div>
             <!-- <div class="card">Computer's Deck</div> -->
             <!-- <img src="Card Template.png" alt="Blank Card" id="computersDeck"> -->
+            <!-- <div class="playingCard" id="cardWrapper"> -->
+            <div class="playingCard" id="cardWrapper">
             <div id="cDeckDisplay">cDeck</div>
-           <div id="gameResult"><h2>Game Result</h2></div>
-           <div id="winnersResult"><h2>Winner</h2></div>
+            </div>
+            <button class="box" id="gameResult">Game Result</button>
+            <button class="box" id="winnersResult">Winner</button>
         </div>
     </div>
 </main>
 </body>
 <footer>
     <ul>
-        <li class="button">Let the War Restart!</li>
-        <li class="button">Let the War Reset!</li>
+        <li class="button" id="reset">Let the War Restart!</li>
+        <!-- <li class="button">Let the War Reset!</li> -->
     </ul>
 </footer>
 </html>

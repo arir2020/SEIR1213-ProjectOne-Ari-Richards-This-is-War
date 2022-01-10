@@ -5,6 +5,10 @@
     color: whitesmoke; */
 }
 
+body{
+    background-color: wheat;
+}
+
 h1, h2{
     color: whitesmoke;
     background-color: pink;
@@ -14,6 +18,10 @@ h1, h2{
     border: 5px solid whitesmoke;
 }
 
+h1{
+    margin: 0 auto;
+    width: 50%;
+}
 h2 {
     font-size: 50px;
     margin: 25px 10px;    
@@ -23,28 +31,36 @@ h2 {
     display: flex;
     margin: auto;
     flex-wrap: wrap;
-    width: 1250px;
+    width: 1500px;
+    height: 950px;
     justify-content: center;
-    border: 5px solid whitesmoke;
+    border: 10px solid white;
     background-color: whitesmoke;
 }
 
 .cell{
-    width: 48%;
-    height: 850px;
+    display: inline;
+    width: 45%;
+    height: 900px;
     margin: 10px 5px;
-    border: 5px solid whitesmoke;
+    border: 15px solid white;
 }
+
+
 
 .box{
     width: 20%;
     height: 100px;
     background-color: #ffc0cb;
-    border: 5px solid #f5f5f5;
-    margin: 20px 230px 20px 230px;
+    border: 5px solid white;
+    margin: 50px 230px 20px 230px;
+    padding: 35px 5px;
     justify-content: center;
+    align-content: center;
     border-radius: 10px;
+    text-align: center;
 }
+
 
 .card{
     display: inline-flex;
@@ -66,25 +82,57 @@ button{
     align-items: center;
 }
 
-.button{
+.button{ 
     list-style: none;
     flex-wrap: wrap;
     color: whitesmoke;
     background-color: pink;
     text-align: center;
-    font-size: 20px;
+    font-size: 50px;
     border-radius: 25px;
     border: 5px solid whitesmoke;
-    padding: 5px;
+    padding: 50px 5px;
     flex-direction: column;
-    width: 30%;
-    height: 30%;
+    width: 35%;
+    height: 15%;
     justify-content: center;
-    margin: 20px 450px;
+    align-content: center;
+    margin: 10px 600px;
   
 }
 
+.playingCard{
+    text-align: center;
+    display: inline-block;
+    /* background-image: url("Card Template.png"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    background-color: pink;
+    border: 5px solid white;
+    border-radius: 25px;
+    justify-content: center;
+    height: 325px;
+    width: 205px;
+    /* margin: 30px 15px 0 75px; */
+    margin: 30px 15px 0 50px;
+    padding: 100px 25px;
+    
+}
 
+#gameResult, #winnersResult{
+    position: relative;
+    display: inline-block;
+   width: 150px;
+   margin: 50px 10px 50px 85px;
+
+}
+
+
+
+
+/* 
 #blank{
     display: flex;
     justify-content: center;
@@ -98,12 +146,13 @@ button{
 }
 
 
-div{
+ .playingCard{
     text-align: center;
+    background-image: url("Card\ Template.png");
 }
 
 
-
+ */
 
 
 
@@ -159,4 +208,4 @@ div{
     height: 500px;
     border: 5px solid whitesmoke;
     margin: 0 20px 0 20px;
-} */
+} */ 

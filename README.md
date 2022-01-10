@@ -1,12 +1,16 @@
-##This is War!
+<h1>This is War!<h1>
 
-![](./ThisisWarWireframe.png)
+![](./AceofClubs.png)
+![](./AceofClubs.png)
+![](./GameFront.png)
+
+
 
 A game of 'I Declare War' with a little more pink and fluffiness!
 
 
 
-##User Stories
+<!-- ##User Stories
 
 > As a player, I want to be able to start a game.
 
@@ -73,4 +77,4 @@ Resetting the game (while maintaining score)
     > clear all cards off the board
     > return cards to dealer's deck
     > alert and ask player if they want to reset score
-    > do not reset the score boxes 
+    > do not reset the score boxes  -->
