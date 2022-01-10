@@ -60,24 +60,20 @@ function dealCards(playingDeck){
     }
 }
 
-// function getCard(deck){
-//     currentCard = deck.pop()
-// }
-
 function compareCards(card1, card2){
     let points = (card1.value + card2.value)
     if (card1.value == card2.value){
-        player.push(card1)
-        computer.push(card2)
+        playersDeck.push(card1)
+        computersDeck.push(card2)
         winner = "no one! issa tie!"
         console.log(card1, card2)
         displayRemainingCards()
         showWinner()
     } 
     else if (card1.value > card2.value){
-        computer.pop(card2)
-        player.push(card1)
-        player.push(card2)
+        computersDeck.pop(card2)
+        playersDeck.push(card1)
+        playersDeck.push(card2)
         winner = "player"
         console.log("Total card value = " + (card1.value + card2.value))
         console.log(card1, card2)
@@ -86,9 +82,9 @@ function compareCards(card1, card2){
         showWinner()
     }
      else if (card2.value > card1.value) {
-        player.pop(card1)
-        computer.push(card1)
-        computer.push(card2)
+        playersDeck.pop(card1)
+        computersDeck.push(card1)
+        computersDeck.push(card2)
         winner = "computer"
         console.log("Total card value = " + (card1.value + card2.value))
         console.log(card1, card2)
@@ -97,10 +93,8 @@ function compareCards(card1, card2){
         showWinner()
     }
     return winner
-}  
-
-// function  winConditions(){
-//     if (playersDeck.length === 0 && computersDeck.length > playersDeck.length){
+} 
+//   if (playersDeck.length === 0 && computersDeck.length > playersDeck.length){
 //         winner = "computer"
 //         console.log("Game Over! Computer wins!")
 //     } else if (computersDeck.length === 0 && playersDeck.length > computersDeck) {
@@ -110,10 +104,9 @@ function compareCards(card1, card2){
 //         winner = "tie"
 //         console.log("Game Over! Issa draw!")
 //     }
-// }
+
 
 function drawCard(){
-    let deck = [];
     let playersCard = playersDeck.pop();
     let computersCard = computersDeck.pop();
     for(let s = 0; s < playersDeck.length; s++){
@@ -132,6 +125,9 @@ function displayScore(){
     computersScore.innerText = cScore
 }
 
+function clearCards(){
+    pCard.pop(playersDeck)
+}
 function displayRemainingCards() {
     psDeck.innerText = "Cards Remaining: " + playersDeck.length
     csDeck.innerText = "Cards Remaining: " + computersDeck.length
@@ -149,24 +145,26 @@ startButton.addEventListener("click", function(){
     dealCards(shuffledDeck)
     displayScore()
     displayRemainingCards()
+    alert("The War Has Begun!")
 })
 
 // })
 //wrap in conditional (109-112) so you can't play cards that don't exist and alert game over on the else
 playButton.addEventListener("click", function(){
-    if (computersDeck.length === 0 && playersDeck.length === 0){
-        console.log("Game Over! Issa draw!")
-    } else if (computersDeck.length === 0 && playersDeck.length > computersDeck.length){
-        console.log("Game Over! Player wins!")
-    } else (playersDeck.length === 0 && computersDeck.length > playersDeck.length);{
-        console.log("Game Over! Computer wins!")
-    }
+    // if (computersDeck.length == 0 && playersDeck.length == 0){
+    //     alert("Game Over! Issa draw!")
+    // } else if (computersDeck.length == 0 && playersDeck.length > computersDeck.length){
+    //     alert("Game Over! Player wins!")
+    // } else (playersDeck.length == 0 && computersDeck.length > playersDeck.length);{
+    //     alert("Game Over! Computer wins!")
+    // }
+    console.log(playersDeck)
+    console.log(computersDeck)
     const pCard = playersDeck[0]
     const cCard = computersDeck[0]
     displayCards(pCard, cCard) 
     // compareCards(pCard, cCard)
-    drawCard(playersDeck)
-    drawCard(computersDeck)
+    drawCard()
 })
 
 // playButton.addEventListener("click", function(){
@@ -179,6 +177,10 @@ trigger.addEventListener("click", function(){
    compareCards(pCard, cCard)   
    displayScore()
    showWinner()
+   const newPCard = playersDeck[1]    
+   const newCCard = computersDeck[1]
+   displayCards(newPCard, newCCard)
+//    winConditions()
 })
 
 resetButton.addEventListener("click", function(){
