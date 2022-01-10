@@ -1,12 +1,13 @@
-<h1>This is War!<h1>
 
-![](./AceofClubs.png)
-![](./AceofClubs.png)
+                                                        <h1>This is War!<h1>
+
+![](.Cards/AceofClubs.png)
+![](.Cards/AceofClubs.png)
 ![](./GameFront.png)
 
 
 
-A game of 'I Declare War' with a little more pink and fluffiness!
+                                <h2>A game of 'I Declare War' with a little more pink and fluffiness!<h2>
 
 
 
