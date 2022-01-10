@@ -1,8 +1,8 @@
 *{
     box-sizing: border-box;
     font-family: 'Comfortaa', cursive;
-    background-color: wheat;
-    color: whitesmoke;
+    /* background-color: wheat;
+    color: whitesmoke; */
 }
 
 h1, h2{
@@ -91,8 +91,16 @@ button{
     align-items: center;
 }
 
+#pCardDisplay, #cCardDisplay{
+    font-size: 20px;
+    color: black;
+    margin: 20px;
+}
 
 
+div{
+    text-align: center;
+}
 
 
 

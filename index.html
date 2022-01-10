@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js" defer></script>
-    <script src="deck.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poiret+One&display=swap" rel="stylesheet">    <title>This is War!</title>
 </head>
@@ -22,21 +21,28 @@
     <div id="gameboard">
         <div class="cell" id="playersBoard">
             <h2>Player's Board</h2>
-            <div class="box" id="playersScorebox"></div>
+            <div class="box" id="playersScorebox">Score</div>
+            <!-- <div class="box" id="playersWinbox">Wins</div> -->
             <!-- <div class="card">Player's Card</div> -->
-            <img src="Card Template.png" alt="Blank Card" id="playersCard">
+            <!-- <img src="Card Template.png" alt="Blank Card" id="pCardDisplay"> -->
+            <div id="pCardDisplay">pCard</div>
             <!-- <div class="card">Player's Deck</div>    -->
-            <img src="Card Template.png" alt="Blank Card" id="playersDeck">
-            <button class="box">Play a Card</button>      
+            <!-- <img src="Card Template.png" alt="Blank Card" id="playersDeck"> -->
+            <div id="pDeckDisplay">pDeck</div>
+            <button class="box" id="playButton">Play a Card</button>      
         </div>
         <div class="cell" id="computersBoard">
             <h2>Computer's Board</h2>
-            <div class="box" id="computersScorebox"></div>
+            <div class="box" id="computersScorebox">Score</div>
+            <!-- <div class="box" id="computersWinbox">Wins</div> -->
             <!-- <div class="card">Computer's Card</div>-->
-            <img src="Card Template.png" alt="Blank Card" id="computersCard">
+            <!-- <img src="Card Template.png" alt="Blank Card" id="cCardDisplay"> -->
+            <div id="cCardDisplay">cCard</div>
             <!-- <div class="card">Computer's Deck</div> -->
-            <img src="Card Template.png" alt="Blank Card" id="computersDeck">
-            <h2>Game Result</h2>
+            <!-- <img src="Card Template.png" alt="Blank Card" id="computersDeck"> -->
+            <div id="cDeckDisplay">cDeck</div>
+           <div id="gameResult"><h2>Game Result</h2></div>
+           <div id="winnersResult"><h2>Winner</h2></div>
         </div>
     </div>
 </main>
