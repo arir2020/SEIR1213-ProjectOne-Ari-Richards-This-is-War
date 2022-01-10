@@ -60,35 +60,38 @@ function dealCards(playingDeck){
     }
 }
 
+function clearCards(playingDeck){
+    for(let r = 0; r < 26; r++){
+        playersDeck.pop(playingDeck.push[w])
+        computersDeck.pop(playingDeck.push[w])
+    }
+}
+
 function compareCards(card1, card2){
-    let points = (card1.value + card2.value)
     if (card1.value == card2.value){
-        playersDeck.push(card1)
-        computersDeck.push(card2)
+        playersDeck.shift(card1)
+        computersDeck.shift(card2)
         winner = "no one! issa tie!"
         console.log(card1, card2)
+        points = null
         displayRemainingCards()
         showWinner()
     } 
     else if (card1.value > card2.value){
-        computersDeck.pop(card2)
-        playersDeck.push(card1)
-        playersDeck.push(card2)
+        computersDeck.shift(card2)
+        playersDeck.unshift(card1)
+        playersDeck.unshift(card2)
         winner = "player"
-        console.log("Total card value = " + (card1.value + card2.value))
-        console.log(card1, card2)
-        pScore + points.value
+        pScore + points
         displayRemainingCards()
         showWinner()
     }
      else if (card2.value > card1.value) {
-        playersDeck.pop(card1)
-        computersDeck.push(card1)
-        computersDeck.push(card2)
+        playersDeck.shift(card1)
+        computersDeck.unshift(card1)
+        computersDeck.unshift(card2)
         winner = "computer"
-        console.log("Total card value = " + (card1.value + card2.value))
-        console.log(card1, card2)
-        cScore + points.value
+        cScore + points
         displayRemainingCards()
         showWinner()
     }
@@ -105,13 +108,12 @@ function compareCards(card1, card2){
 //         console.log("Game Over! Issa draw!")
 //     }
 
-
 function drawCard(){
     let playersCard = playersDeck.pop();
     let computersCard = computersDeck.pop();
-    for(let s = 0; s < playersDeck.length; s++){
-    playersCard = playersDeck[s++]
-    computersCard = playersDeck[s++]
+    for(let s = 0; s < playersDeck.length; s+= 1){
+    playersCard = playersDeck[s+=1]
+    computersCard = playersDeck[s+=1]
     }
 }
 
@@ -125,9 +127,7 @@ function displayScore(){
     computersScore.innerText = cScore
 }
 
-function clearCards(){
-    pCard.pop(playersDeck)
-}
+
 function displayRemainingCards() {
     psDeck.innerText = "Cards Remaining: " + playersDeck.length
     csDeck.innerText = "Cards Remaining: " + computersDeck.length
@@ -135,6 +135,16 @@ function displayRemainingCards() {
 
 function showWinner() {
     displayWinner.textContent = "The winner is " + winner
+}
+
+function endGame(){    
+    if (computersDeck.length == 0 && playersDeck.length == 0){
+        alert("Game Over! Issa draw!")
+    } else if (computersDeck.length == 0 && playersDeck.length > computersDeck.length){
+        alert("Game Over! Player wins!")
+    } else (playersDeck.length == 0 && computersDeck.length > playersDeck.length);{
+        alert("Game Over! Computer wins!")
+    }
 }
 
 //BUTTONS
@@ -151,20 +161,21 @@ startButton.addEventListener("click", function(){
 // })
 //wrap in conditional (109-112) so you can't play cards that don't exist and alert game over on the else
 playButton.addEventListener("click", function(){
-    // if (computersDeck.length == 0 && playersDeck.length == 0){
-    //     alert("Game Over! Issa draw!")
-    // } else if (computersDeck.length == 0 && playersDeck.length > computersDeck.length){
-    //     alert("Game Over! Player wins!")
-    // } else (playersDeck.length == 0 && computersDeck.length > playersDeck.length);{
-    //     alert("Game Over! Computer wins!")
-    // }
     console.log(playersDeck)
     console.log(computersDeck)
-    const pCard = playersDeck[0]
-    const cCard = computersDeck[0]
+    for (p = 0; p < 26; p++){
+    const pCard = playersDeck[p]
+    const cCard = computersDeck[p]
     displayCards(pCard, cCard) 
+    } 
+    for( o = 0; o < 2; o+=1){
+    const newPCard = playersDeck[o]    
+    const newCCard = computersDeck[o]
+   displayCards(newPCard, newCCard)
+    }
     // compareCards(pCard, cCard)
-    drawCard()
+    // drawCard()
+
 })
 
 // playButton.addEventListener("click", function(){
@@ -172,16 +183,16 @@ playButton.addEventListener("click", function(){
 // })
 
 trigger.addEventListener("click", function(){
-    const pCard = playersDeck[0]
-    const cCard = computersDeck[0]   
-   compareCards(pCard, cCard)   
+    for(let l = 0; l < 2; l+=1){
+    const pCard = playersDeck[l]
+    const cCard = computersDeck[l]   
+   compareCards(pCard, cCard) 
+    }
    displayScore()
    showWinner()
-   const newPCard = playersDeck[1]    
-   const newCCard = computersDeck[1]
-   displayCards(newPCard, newCCard)
-//    winConditions()
-})
+   endGame()
+    })
+
 
 resetButton.addEventListener("click", function(){
     document.location.reload()
